@@ -8,7 +8,7 @@
 
 ## How to start
 
--b1 : create project and cd this project
+-b1 : create project (polymer-demo) and cd this project
 
 -b2 : npm init -y
 
@@ -27,3 +27,7 @@
 -cd this project have created
 
 -npx serve
+
+## document :
+
+- Link :https://polymer-library.polymer-project.org/3.0/docs/install-3-0
