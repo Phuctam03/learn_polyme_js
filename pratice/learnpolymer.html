@@ -3,10 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="webcomponents-lite.js"></script>
-    <link rel="import" href="polymer.html" />
+    <script src="https://polygit.org/components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link
+      rel="import"
+      href="https://polygit.org/components/polymer/polymer.html"
+    />
 
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <dom-module id="hello-world">
+      <template>
+        <style>
+          h2 {
+            color: blue;
+          }
+        </style>
+        <h2>Hello [[name]]!</h2>
+      </template>
+      <script>
+        Polymer({
+          is: "hello-world",
+          properties: {
+            name: { type: String, value: "Polymer" },
+          },
+        });
+      </script>
+    </dom-module>
+
+    <hello-world name="Mr.Tom"></hello-world>
+  </body>
 </html>
