@@ -1,12 +1,12 @@
 # learn_polyme_js
 
-# Overview
+## Overview
 
 -Polymer is a library of javascript, developing by google since 2013
 
 -Main function: reusable, Web components
 
-# How to start
+## How to start
 
 -b1 : create project and cd this project
 
@@ -14,7 +14,7 @@
 
 -b3 : install polymer : npm install @polymer/polymer
 
-# How to use
+## How to use
 
 -Create file index.html(file orginal use add components )
 
@@ -22,7 +22,7 @@
 
 -in file index, call file .js
 
-# How to run
+## How to run
 
 -cd this project have created
 
