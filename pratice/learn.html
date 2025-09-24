@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="learn.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button class="dropdown-toggle">Toggle Dropdown</button>
+      <ul class="dropdown-menu">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </div>
+
+    <!-- Nội dung dài để có thể scroll -->
+    <div style="height: 1000px; background: #f0f0f0">
+      Scroll down to test...
+    </div>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleButton = document.querySelector(".dropdown-toggle");
+      const dropdownMenu = document.querySelector(".dropdown-menu");
+
+      // Toggle droplist khi click
+      toggleButton.addEventListener("click", () => {
+        dropdownMenu.classList.toggle("show");
+      });
+
+      // Ẩn droplist khi scroll ra khỏi vùng nhìn thấy
+      //   window.addEventListener("scroll", () => {
+      //     const rect = dropdownMenu.getBoundingClientRect();
+      //     const isVisible =
+      //       rect.top >= 0 &&
+      //       rect.left >= 0 &&
+      //       rect.bottom <=
+      //         (window.innerHeight || document.documentElement.clientHeight) &&
+      //       rect.right <=
+      //         (window.innerWidth || document.documentElement.clientWidth);
+
+      //     if (!isVisible && dropdownMenu.classList.contains("show")) {
+      //       dropdownMenu.classList.remove("show");
+      //     }
+      //   });
+
+      // Ẩn droplist khi click ra ngoài
+      document.addEventListener("click", (event) => {
+        if (
+          !dropdownMenu.contains(event.target) &&
+          !toggleButton.contains(event.target)
+        ) {
+          dropdownMenu.classList.remove("show");
+        }
+      });
+    });
+  </script>
+</html>
